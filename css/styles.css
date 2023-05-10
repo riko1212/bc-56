@@ -19,12 +19,59 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .list {
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid red;
 }
 
 .pre-title {
@@ -48,13 +95,18 @@ body {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  cursor: pointer;
+}
+
+.section {
+  padding-top: 120px;
+  border-bottom: 120px;
 }
 
 /** -----------------HEADER ------------------*/
 
 .header {
   background-color: gray;
+  padding-top: 32px;
 }
 
 .header-link {
@@ -98,6 +150,7 @@ body {
 }
 .hero-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 .hero-title {
   font-family: 'Raleway', sans-serif;
@@ -105,6 +158,7 @@ body {
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: var(--first-title-color);
+  margin-bottom: 20px;
 }
 .hero-post-title {
   font-weight: 400;
@@ -116,8 +170,6 @@ body {
 
 /** -----------------ABOUT ------------------*/
 
-.about {
-}
 .about-list {
 }
 
@@ -127,21 +179,25 @@ body {
 }
 .about-pre-title {
   color: #303030;
+  margin-bottom: 20px;
 }
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: 20px;
 }
 .about-post-title {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 20px;
 }
 .about-text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 42px;
 }
 .about-button {
   color: #303030;
@@ -154,11 +210,15 @@ body {
 }
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 .prices-title {
   color: var(--first-title-color);
+  margin-bottom: 44px;
 }
 .prices-list {
+  border: 1px solid #ffffff;
+  padding: 30px 20px;
 }
 
 .prices-item {
@@ -172,12 +232,13 @@ body {
 }
 .prices-button {
   color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  margin-top: 44px;
 }
 
 /** -----------------BENEFITS ------------------*/
 
-.benefits {
-}
 .benefits-list {
 }
 .list {
