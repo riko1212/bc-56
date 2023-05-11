@@ -67,7 +67,8 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -89,17 +90,22 @@ img {
 }
 
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
 }
 
 .section {
   padding-top: 120px;
-  border-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 /** -----------------HEADER ------------------*/
@@ -109,12 +115,37 @@ img {
   padding-top: 32px;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 130px;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
 .header-link {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+}
+
+.header-address {
+  margin-left: auto;
+  margin-right: 42px;
 }
 
 .header-address-link {
@@ -134,9 +165,13 @@ img {
 /** -----------------HERO ------------------*/
 
 .hero {
-  background-color: #7c7f8c;
+}
+
+.hero-container {
+  display: flex;
 }
 .hero-list {
+  width: 100px;
 }
 
 .hero-item {
@@ -147,6 +182,12 @@ img {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+}
+
+.hero-wrap {
+  background-color: #7c7f8c;
+  padding: 272px 100px 208px 100px;
+  flex-grow: 1;
 }
 .hero-pre-title {
   color: rgba(157, 164, 189, 0.6);
@@ -166,11 +207,23 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+  max-width: 360px;
 }
 
 /** -----------------ABOUT ------------------*/
 
+.about > .container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-wrap {
+  padding-right: 100px;
+}
+
 .about-list {
+  display: flex;
+  gap: 30px;
 }
 
 .about-item {
@@ -272,4 +325,40 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+}
+
+/** -----------------BARBERS ------------------*/
+
+.barbers-pre-title {
+  color: #303030;
+  margin-bottom: 20px;
+}
+
+.barbers-title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.barbers-list {
+  display: flex;
+  gap: 30px;
+}
+
+.barbers-item {
+  width: calc((100% - 60px) / 3);
+}
+.barbers-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+.barbers-item-text {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
 }
