@@ -103,6 +103,11 @@ img {
   background-color: transparent;
 }
 
+.btn:is(:hover, :focus) {
+  background-color: #ff6c00;
+  color: var(--first-btn-color);
+}
+
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -141,6 +146,15 @@ img {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+}
+
+/* .header-link:is(:hover, :focus) {
+  color: #ff6c00;
+} */
+
+.header-link:hover,
+.header-link:focus {
+  color: #ff6c00;
 }
 
 .header-address {
@@ -261,10 +275,17 @@ img {
 .prices {
   background-color: #303030;
 }
+
+.prices-wrap {
+  display: flex;
+  gap: 30px;
+}
+
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: 20px;
 }
+
 .prices-title {
   color: var(--first-title-color);
   margin-bottom: 44px;
@@ -272,10 +293,22 @@ img {
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
 }
 
 .prices-item {
+  display: flex;
+  justify-content: space-between;
 }
+
+/* .prices-item:not(:last-child) {
+  margin-bottom: 20px;
+} */
+
+.prices-item + .prices-item {
+  margin-top: 20px;
+}
+
 .prices-item-text {
   font-size: 18px;
   line-height: 1.67;
@@ -292,17 +325,46 @@ img {
 
 /** -----------------BENEFITS ------------------*/
 
+.benefits-container {
+  display: flex;
+  padding-left: 85px;
+  gap: 130px;
+  padding-right: 115px;
+}
+
+.benefits-wrap {
+  padding-top: 9px;
+}
+
 .benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
 }
-.list {
-}
+
 .benefits-item {
+  width: 170px;
+  height: 133px;
+  border: 1px solid #000000;
+  padding: 20px 24px;
 }
+
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
+
 .benefits-count {
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   text-align: center;
+  display: block;
+  margin-bottom: 6px;
   letter-spacing: 0.05em;
   color: #303030;
 }
@@ -316,9 +378,11 @@ img {
 }
 .benefits-pre-title {
   color: #303030;
+  margin-bottom: 20px;
 }
 .benefits-title {
   color: var(--second-title-color);
+  margin-bottom: 20px;
 }
 .benefits-after-title {
   font-size: 18px;
@@ -347,6 +411,11 @@ img {
 .barbers-item {
   width: calc((100% - 60px) / 3);
 }
+
+.barbers-item-wrap {
+  padding-top: 30px;
+}
+
 .barbers-item-title {
   font-weight: 400;
   font-size: 18px;
@@ -354,11 +423,136 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
+  margin-bottom: 8px;
 }
+
 .barbers-item-text {
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.02em;
   color: #ff6c00;
+}
+
+/** -----------------Gallery ------------------*/
+
+.gallery-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: #303030;
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 60px 30px; */
+  column-gap: 30px;
+  row-gap: 60px;
+}
+
+.gallery-item {
+  width: calc((100% - 90px) / 4);
+}
+
+.contact-wrap {
+  background-color: #000000;
+}
+
+.contact-wrap > .container {
+  display: flex;
+}
+
+/** -----------------ONLINE ------------------*/
+
+.online {
+  width: calc(50% + 15px);
+}
+
+.online-title {
+  color: var(--first-title-color);
+}
+
+/** -----------------CONTACTS ------------------*/
+
+.contacts {
+  width: calc(50% - 15px);
+  padding-left: 105px;
+  background-color: #7c7f8c;
+}
+.contacts-title {
+  color: var(--first-title-color);
+  margin-bottom: 40px;
+}
+.contacts-address {
+  font-style: normal;
+  margin-bottom: 70px;
+}
+.contacts-list {
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-item:first-child > .contacts-link {
+  font-weight: 700;
+}
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.contacts-schedule {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/** -----------------FOOTER ------------------*/
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #9da4bd;
+}
+.footer-list {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-item {
+}
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
 }
