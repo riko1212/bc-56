@@ -80,6 +80,19 @@ img {
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pre-title::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+  /* display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px; */
 }
 
 .section-title {
@@ -200,6 +213,14 @@ img {
 
 .hero-wrap {
   background-color: #7c7f8c;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../img/hero-bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 272px 100px 208px 100px;
   flex-grow: 1;
 }
@@ -209,12 +230,28 @@ img {
 }
 .hero-title {
   font-family: 'Raleway', sans-serif;
-  font-size: 50px;
+  font-size: 72px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: var(--first-title-color);
   margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
 }
+
+.hero-title::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: tomato;
+}
+
+.hero-title::after {
+  content: '!';
+  color: tomato;
+  font-size: 100px;
+}
+
 .hero-post-title {
   font-weight: 400;
   font-size: 18px;
@@ -247,6 +284,10 @@ img {
 .about-pre-title {
   color: #303030;
   margin-bottom: 20px;
+}
+
+.about-pre-title::before {
+  background-color: #303030;
 }
 .about-title {
   color: var(--second-title-color);
@@ -299,6 +340,20 @@ img {
 .prices-item {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.prices-item::before {
+  content: '';
+  width: 100px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+}
+
+.prices-item-text:first-child {
+  order: -1;
 }
 
 /* .prices-item:not(:last-child) {
@@ -368,6 +423,19 @@ img {
   letter-spacing: 0.05em;
   color: #303030;
 }
+
+.benefits-count::after {
+  content: '+';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+  color: transparent;
+  display: inline-block;
+  vertical-align: top;
+  text-shadow: 1px 9px #ff6c00;
+}
+
 .benefits-item-text {
   font-weight: 600;
   font-size: 11px;
@@ -432,7 +500,46 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ff6c00;
+  margin-bottom: 30px;
 }
+
+.barbers-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers-soc-item {
+  width: 44px;
+  height: 44px;
+}
+.barbers-soc-link {
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.barbers-soc-icon {
+  fill: currentColor;
+}
+
+.barbers-soc-link:hover {
+  background-color: teal;
+  color: yellow;
+}
+
+/* .barbers-soc-link:hover {
+  background-color: teal;
+}
+
+.barbers-soc-link:hover .barbers-soc-icon {
+  fill: yellow;
+} */
 
 /** -----------------Gallery ------------------*/
 
