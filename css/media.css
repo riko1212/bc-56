@@ -13,20 +13,76 @@
     max-width: 720px;
   }
 
+  .header-navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-list {
+    display: flex;
+    gap: 30px;
+  }
+
+  .header-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    transition: color 300ms ease;
+  }
+
+  /* .header-link:is(:hover, :focus) {
+  color: #ff6c00;
+} */
+
+  .header-link:hover,
+  .header-link:focus {
+    color: #ff6c00;
+  }
+
+  .header-address {
+    margin-left: auto;
+    margin-right: 42px;
+  }
+
+  .header-address-link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .header-button {
+    color: #ffffff;
+  }
+
+  .mob-menu,
+  .menu-open-btn {
+    display: none;
+  }
+
   .hero {
     background-image: unset;
   }
 
   .hero-wrap {
-    background-image: linear-gradient(
-        rgba(25, 28, 38, 0.2),
-        rgba(25, 28, 38, 0.2)
-      ),
-      url(../img/hero-bg.jpeg);
+    background-image: var(--bg-gradient), url(../img/hero-bg-tab.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 308px 98px 238px 98px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-wrap {
+      background-image: var(--bg-gradient), url(../img/hero-bg-tab-2x.jpeg);
+    }
   }
 
   .hero-post-title {
@@ -105,7 +161,24 @@
   }
 
   .hero-wrap {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../img/hero-bg.jpeg);
     padding: 272px 100px 208px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-wrap {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url(../img/hero-bg-2x.jpeg);
+    }
   }
 
   .barbers-item {
